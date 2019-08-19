@@ -1,5 +1,5 @@
 #data sets from R
-
+library(dplyr)
 #without rownames
 write.csv(mtcars, file='csv/mtcars1.csv', row.names = F)
 
@@ -23,3 +23,11 @@ carnames = paste('car', 1:32, sep='')
 df1 = cbind(carnames, df1)
 df1
 write.csv(df1, file='csv/mtcars4.csv', row.names = F)
+
+#-----
+mtcars %>% tibble::rownames_to_column() %>% write.csv('csv/mtcars5.csv',row.names=F)
+
+
+data()
+write.csv(iris, file='csv/iris1.csv',row.names = F)
+
