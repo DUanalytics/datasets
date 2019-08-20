@@ -33,6 +33,8 @@ write.csv(iris, file='csv/iris1.csv',row.names = F)
 write.csv(Titanic, file='csv/titanic1.csv',row.names = F)
 write.csv(VIM::sleep, file='csv/sleep1.csv',row.names = F)
 write.csv(women, file='csv/women1.csv',row.names = F)
+write.csv(women, file='csv/women2.csv',row.names = F, col.names = c('X','Y'))
+?write.csv
 write.csv(AirPassengers, file='csv/airpassengers.csv',row.names = F)
 
 
