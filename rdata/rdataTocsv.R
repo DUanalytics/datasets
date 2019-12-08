@@ -1,39 +1,29 @@
+#save to Git : data in RDS and RDA formats
+#and then load the data
 
 
-
-
-load("E:/analytics/projects/datasets/rdata/titanic.raw.rdata")
-
-titanic.raw
-
-
-write.csv(titanic.raw, 'csv/titanic.csv', row.names = F)
-
-url ='https://raw.githubusercontent.com/DUanalytics/datasets/master/csv/titanic.csv'
-
-titanicdata = read.csv(url)
-head(titanicdata)
-
-saveRDS(titanicdata, file='rdata/titanic.RDS')
-
-#
+#net eg 32 MB data-----
 githubURL <- "https://github.com/thefactmachine/hex-binning-gis-data/raw/master/popDensity.RData"
 load(url(githubURL))
 head(df)
 dim(df)
 
-#-----
-"https://github.com/DUanalytics/datasets/blob/master/rdata/titanic.RDS?raw=true"
-"https://github.com/DUanalytics/datasets/blob/master/rdata/raw/master/titanic.RDS"
+#RDS-------
+#"https://github.com/DUanalytics/datasets/blob/master/rdata/titanic.RDS?raw=true"
+#read from CSV
+url ='https://raw.githubusercontent.com/DUanalytics/datasets/master/csv/titanic.csv'
+titanicdata = read.csv(url)
+head(titanicdata)
+saveRDS(titanicdata, file='rdata/titanic.RDS')  #save into RDS : only 1 object
+#commit and push
+rm(list=ls())
+#load load from Git
+urlRDSL <- "https://github.com/DUanalytics/datasets/blob/master/rdata/titanic.RDS?raw=true"
+titanicdf=readRDS(url(urlRDS))
+head(titanicdf)
 
-"https://github.com/DUanalytics/datasets/blob/master/rdata/titanic.RDS"
-
-
-githubURL <- "https://github.com/DUanalytics/datasets/blob/master/rdata/titanic.RDS?raw=true"
-df=readRDS(url(githubURL))
-head(df)
-
-#Rdata
+#----------------------------------------------------------------------------------
+#Rdata------------------
 #data() #all data sets
 DUmtcars = mtcars
 DUusarrests = USArrests
@@ -50,9 +40,6 @@ DUmtcars
 urlRDA = "https://github.com/DUanalytics/datasets/blob/master/rdata/data.RData?raw=true"
 load(url(urlRDA))
 DUmtcars
+DUiris
+DUusarrests
 
-
-
-url2="https://github.com/DUanalytics/datasets/blob/master/rdata/titanic.raw.Rdata"
-load(url(url2))
-#download and then load
