@@ -34,15 +34,22 @@ df=readRDS(url(githubURL))
 head(df)
 
 #Rdata
-data()
-# Saving on object in RData format
-save(mtcars, file = "rdata/data.RData")
+#data() #all data sets
+DUmtcars = mtcars
+DUusarrests = USArrests
+DUiris = iris
 # Save multiple objects
-save(iris, USArrests, file = "rdata/data.RData")
+save(DUmtcars, DUiris, DUusarrests, file = "rdata/data.RData")
 # To load the data again
-load("data.RData")
+rm(list=ls())  #first clean env
+load("rdata/data.RData")
 
 #now load from url
+rm(list=ls())
+DUmtcars
+urlRDA = "https://github.com/DUanalytics/datasets/blob/master/rdata/data.RData?raw=true"
+load(url(urlRDA))
+DUmtcars
 
 
 
