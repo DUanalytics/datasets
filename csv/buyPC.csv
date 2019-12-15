@@ -1,0 +1,15 @@
+Age_Gp,Income,Student,Credit_Rating,Buys_PC
+Youth,High,No,Fair,No
+Youth,High,No,Excellent,No
+Middle_Age,High,No,Fair,Yes
+Senior,Medium,No,Fair,Yes
+Senior,Low,Yes,Fair,Yes
+Middle_Age,Low,Yes,Excellent,No
+Youth,Low,Yes,Excellent,Yes
+Youth,Low,Yes,Excellent,Yes
+Senior,Medium,No,Fair,No
+Youth,Low,Yes,Fair,Yes
+Middle_Age,Medium,Yes,Fair,Yes
+Middle_Age,Medium,Yes,Excellent,Yes
+Middle_Age,Medium,No,Excellent,Yes
+Senior,Medium,No,Excellent,No
