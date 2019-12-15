@@ -26,4 +26,4 @@ d4 <- read.arff(link4)
 head(d4)
 #This is a dataset of point of sale information. The data is nominal and each instance represents a customer transaction at a supermarket, the products purchased and the departments involved. The data contains 4,627 instances and 217 attributes. The data is denormalized. Each attribute is binary and either has a value (“t” for true) or no value (“?” for missing). There is a nominal class attribute called “total” that indicates whether the transaction was less than $100 (low) or greater than $100 (high)
 
-https://learnersdesk.weebly.com/weka-tutorials.html
+#https://learnersdesk.weebly.com/weka-tutorials.html
