@@ -1,0 +1,6 @@
+#data set - RS case
+#csv - rsCustomer.csv  #customer info about demographics
+#csv - rsProductHierarchy.csv # Product Info (cat, subcat) 
+#csv - rsTransactions.csv  # Transactions of customers
+#csv - rsCustomer_Final.csv # Merge ones
+
