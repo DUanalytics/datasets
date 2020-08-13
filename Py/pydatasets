@@ -1,1 +1,12 @@
-#Python Data Sets
+#python : Topic :Data Sets in Python
+
+#standard libaries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from pydataset import data
+import seaborn as sns
+
+#all data sets in pydatasets
+data()
+data('AirPassengers')
